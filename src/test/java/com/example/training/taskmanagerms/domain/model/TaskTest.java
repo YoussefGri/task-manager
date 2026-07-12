@@ -28,15 +28,15 @@ public class TaskTest {
     @Test
     public void test_end_task(){
         Task task = new Task(title, deadLine);
-        task.endTask();
+        task.end();
         assertEquals(Status.DONE, task.getStatus());
     }
 
     @Test
     public void test_end_task_already_done() {
         Task task = new Task(title, deadLine);
-        task.endTask();
+        task.end();
 
-        assertThrows(TaskAlreadyFinishedException.class, () -> task.endTask());
+        assertThrows(TaskAlreadyFinishedException.class, () -> task.end());
     }
 }
