@@ -21,7 +21,7 @@ public class Task {
         this.status = Status.TODO;
     }
 
-    public void endTask() {
+    public void end() {
         if (this.status == Status.DONE) {
             throw new TaskAlreadyFinishedException("Task is already finished");
         }
